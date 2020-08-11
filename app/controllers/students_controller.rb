@@ -2,6 +2,7 @@ class StudentsController< ApplicationController
   
 def index
   @student=Student.all
+end
 def new
   
 end
