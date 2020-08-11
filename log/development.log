@@ -998,3 +998,21 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/students/new" for 73.32.34.80 at 2020-08-11 05:36:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 326ms (Views: 317.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 73.32.34.80 at 2020-08-11 05:36:37 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"97RzRa2Ec0IU0qG29/ke9ucpbTvMti8YiQujY0u/sBFg+ONuRFp1AJ1PxOZE2BcoOvjNyQT25FHv9y55AJYwAQ==", "student"=>{"first_name"=>"Mat", "last_name"=>"K"}, "commit"=>"Create Student"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Mat"], ["last_name", "K"], ["created_at", "2020-08-11 05:36:37.296888"], ["updated_at", "2020-08-11 05:36:37.296888"]]
+  [1m[35m (51.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://142.93.11.41:43110/students/1
+Completed 302 Found in 60ms (ActiveRecord: 53.1ms)
+
+
